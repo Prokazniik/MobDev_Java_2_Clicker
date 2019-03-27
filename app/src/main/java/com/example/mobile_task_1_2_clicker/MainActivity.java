@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView mainText;
     Button mainBtn;
+    int i;
 
     private long score = 0;
 
