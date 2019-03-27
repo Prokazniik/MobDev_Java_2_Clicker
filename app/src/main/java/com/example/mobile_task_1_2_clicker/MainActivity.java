@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
     TextView mainText;
     Button mainBtn;
     int i;
+    Button subtarctBtn;
+    Button resetBtn;
+
+
 
     private long score = 0;
 
@@ -22,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         mainText = (TextView) findViewById(R.id.mainText);
         mainBtn = (Button) findViewById(R.id.button);
+        mainBtn2 = (Button) findViewById(R.id.button2);
+        mainBtn3 = (Button) findViewById(R.id.button3);
+
 
 
         View.OnClickListener clickListener = new View.OnClickListener() {
@@ -34,6 +41,34 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mainBtn.setOnClickListener(clickListener);
+        View.OnClickListener clickListener2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score ++;
+                String s = "Кликов: " + score;
+                mainText.setText(s.toCharArray(),0, s.length());
+            }
+        };
+        mainBtn2.setOnClickListener(clickListener2);
+
+        View.OnClickListener clickListener3 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score ++;
+                String s = "Кликов: " + score;
+                mainText.setText(s.toCharArray(),0, s.length());
+            }
+        };
+        mainBtn3.setOnClickListener(clickListener3);
+
+        View.OnClickListener clickListener4 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score ++;
+                String s = "Кликов: " + score;
+                mainText.setText(s.toCharArray(),0, s.length());
+            }
+            };
 
     }
 }
